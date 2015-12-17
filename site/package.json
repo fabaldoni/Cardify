@@ -1,0 +1,15 @@
+{
+  "name": "cardify",
+  "version": "1.0.0",
+  "description": "website that permits a user to create flashcards",
+  "main": "cardify.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.13.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Flavio Baldoni",
+  "license": "ISC"
+}

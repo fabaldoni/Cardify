@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cardify</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="./main.css">
+
+    <style>
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+
+        .vertical-center {
+            min-height: 60%;
+            min-height: 60vh;
+            margin-top: 100px;;
+            display: flex;
+            align-items: center;
+        }
+
+        .fade-out{
+            opacity: 1;
+            transition-property: opacity;
+            transition-delay: 0.0s;
+            transition-duration: 0.2s;
+            transition-timing-function:ease-out;
+        }
+
+        .fade-out:hover{
+            opacity: 0;
+        }
+
+        .text-white{
+            color: #fff;
+        }
+
+        ul.list-group:after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+
+        .list-group-item {
+            float: left;
+        }
+
+        .vcenter {
+            display:inline-flex;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand vcenter" href="#">
+                <img alt="Brand" src="./cardify.png"style="width: 24px;height: 24px; margin-top:auto;margin-bottom:auto;vertical-align: middle">
+                <span style="margin-left: 7px">Cardify</span>
+            </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse pull-right">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="../navbar/">Logon</a></li>
+                <li><a href="../navbar-static-top/">About</a></li>
+                <li><a href="./">Help</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid" >
+
+    <row>
+        <div class=" vertical-center">
+            <div id="flashCard" class="panel panel-default fade-out center-block" style="width: 600px">
+                <div class="panel-body " style="text-align: center">
+                    <h1 id="card_text">What is the top speed of a hummingbird ?</h1>
+                </div>
+                <div class="panel-footer" style="text-align: center">
+                    <span class="glyphicon glyphicon-chevron-left pull-left" ></span>
+                    <span id="card_count">
+                        slide 3 of 10
+                    </span>
+                    <span class="glyphicon glyphicon-chevron-right pull-right" ></span>
+                </div>
+            </div>
+        </div>
+    </row>
+
+</div>
+
+<footer>
+    <div class="navbar navbar-fixed-bottom">
+        <p style="margin-left: 10px">&copy; Cardify 2015</p>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="./keypress.js"></script>
+<script src="./utils.js"></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
+
+
+    function doAfterTransition(){
+
+        if($("#flashCard").css("opacity") == 1) return;
+
+        console.log(context.key + " was pressed");
+        var contentDiv = $("#card_text")[0];
+        var countDiv = $("#card_count")[0];
+
+        switch(context.key){
+            case "Left":
+                context.iterate(-1);
+                contentDiv.innerHTML = context.currentView().question;
+                countDiv.innerHTML = context.currentView().footer;
+                break;
+            case "Right":
+                context.iterate(1);
+                contentDiv.innerHTML = context.currentView().question;
+                countDiv.innerHTML = context.currentView().footer;
+                break;
+            case "Up":
+                contentDiv.innerHTML = context.currentView().answer;
+                break;
+            case "Down":
+                contentDiv.innerHTML = context.currentView().question;
+                break;
+        }
+
+        $("#flashCard").css("opacity",1)
+    }
+
+    $("#flashCard").bind( 'transitionend', doAfterTransition);
+
+    var keyHandler =  function(){
+        console.log(arguments[0].keyIdentifier + " key was typed")
+        this.key = arguments[0].keyIdentifier;
+        $("#flashCard").css("opacity", "0")
+
+    };
+
+
+    var config=[
+        {
+            keys:"left",
+            "on_keydown":keyHandler,
+            this:context
+        },
+        {
+            keys:"right",
+            "on_keydown":keyHandler,
+            this:context
+        },
+        {
+            keys:"up",
+            "on_keydown":keyHandler,
+            this:context
+        },
+        {
+            keys:"down",
+            "on_keydown":keyHandler,
+            this:context
+        }
+    ];
+
+    var listener = new window.keypress.Listener();
+    var my_combos = listener.register_many(config);
+
+</script>
+</body>
+</html>

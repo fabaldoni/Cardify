@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cardify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+
+        @-moz-document url-prefix() {
+            fieldset { display: table-cell; }
+        }
+    </style>
+</head>
+<body>
+
+<!--    <div class="page-headerß" >
+        <H1 class="bg-primary">Cardify</H1>
+    </div>-->
+
+<!--<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+<nav class="navbar navbar-static-top navbar-dark bg-inverse bg-primary">
+    <a href="#" class="pull-left" style="padding-right: 10px"><img src="./cardify.png"></a>
+    <a class="navbar-brand" href="#">Cardify</a>
+    <ul class="nav navbar-nav pull-right">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Log off  <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About  </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact  </a>
+        </li>
+    </ul>
+</nav>-->
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid bg-primary">
+        <div class="navbar-header" style="padding-left: 10px">
+            <a class="navbar-brand" href="#">
+                <img alt="Brand" src="./cardify.png" >
+            </a>
+            <p class="navbar-brand" style="color: #fff">Cardify</p>
+        </div>
+
+    </div>
+</nav>
+
+
+
+
+
+<div class="container" style="margin-top: 10px">
+    <form class="form-horizontal">
+        <fieldset >
+            <legend>Card set details</legend>
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control" id="name" placeholder="give your card set a name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="description" placeholder="describe your card set"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Present cards in random order
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default pull-right">Save</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Flashcards</legend>
+            <div class="form-group">
+                <!--<label for="description" class="col-sm-2 control-label">Question set</label>-->
+                <div class="col-sm-offset-2 col-sm-10">
+            <table class="table table-striped">
+                <tr>
+                    <th>Question</th>
+                    <th>Answer</th>
+                    <th nowrap>
+                        <div>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-plus" style="margin-right:5px"></span>
+                        </a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-pencil" style="margin-right:5px"></span>
+                        </a>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-trash" style="margin-right:5px"></span>
+                        </a>
+                        <a href="#" style="margin-right: 10px">
+                            <span class="glyphicon glyphicon-check" style="margin-right:5px"></span>
+                        </a>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </td>
+                    <td>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+                <tr>
+                    <td>What is the top speed of a hummingbird ?</td>
+                    <td>I don't know. Ask a hummingbird.</td>
+                    <td style="text-align:center">
+                        <a href="#" >
+                            <span class="glyphicon glyphicon-unchecked"></span>
+                        </a>
+                    </td>                </tr>
+            </table>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
+
+
+<footer>
+    <div class="navbar navbar-fixed-bottom">
+        <p style="margin-left: 10px">&copy; Cardify 2015</p>
+    </div>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+</body>
+</html>

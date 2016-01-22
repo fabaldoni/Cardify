@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test file</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-red.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Cardify <i class="material-icons">content_copy</i></span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="">About Us</a>
+            </nav>
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <!-- Icon button -->
+                <button id="help" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">help</i>
+                </button>
+                <!-- Multiline Tooltip -->
+                <div class="mdl-tooltip" for="help">
+                        This page permits you to control how your card deck behaves when you run it.
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Settings</a>
+            <a class="mdl-navigation__link" href="">Cards</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <form>
+                <div class="mdl-grid">
+                    <style>
+                        .mdl-textfield ,.mdl-switch {
+                            margin-left: 30px;
+                        }
+                    </style>
+                    <div class="mdl-cell mdl-cell--12-col">
+                       <h4>Card set details and settings</h4>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" id="sample1" value="Process update group">
+                            <label class="mdl-textfield__label" for="sample1">Card set name</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+                            <label class="mdl-textfield__label" for="sample5">Card set description</label>
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <label id="shuffle" class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+                            <span class="mdl-switch__label">Shuffle</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-2">
+                            <input type="checkbox" id="switch-2" class="mdl-switch__input" checked>
+                            <span class="mdl-switch__label">Show on interval</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-3">
+                            <input type="checkbox" id="switch-3" class="mdl-switch__input" checked>
+                            <span class="mdl-switch__label">Show correct answer after card</span>
+                        </label>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                            <label class="mdl-textfield__label" for="sample2">Interval length (s)</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>

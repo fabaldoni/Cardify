@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test file</title>
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-red.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Cardify <i class="material-icons">content_copy</i></span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="">About Us</a>
+            </nav>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">New Card Set</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <!-- Square card -->
+            <style>
+                .demo-card-square.mdl-card {
+                    width: 220px;
+                    height: 120px;
+                }
+                .demo-card-square > .mdl-card__title {
+                    color: #fff;
+                    background-color:#1565c0;
+                }
+
+            </style>
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col">
+                    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+                        <div class="mdl-card__title mdl-card--expand">
+                            How many process groups exist in the project management life cycle
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            5
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border" style="display: flex; align-items: center">
+
+                            <div class="mdl-layout-spacer"></div>
+                            <button  class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" onclick="window.location='card_settings.html'">
+                                <i class="material-icons">mode_edit</i>
+                            </button>
+                            <button id="btn2" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                                <i class="material-icons">delete</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

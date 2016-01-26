@@ -11,6 +11,19 @@
             display:inline-flex;
             vertical-align: middle;
         }
+
+        .nav-center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .jumboimage{
+            background-image:url("./questionmark.jpg");
+            background-position: 100% 0%;
+            background-size: 500px 500px;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +39,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse pull-right">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../navbar/">Logon</a></li>
+                <li><a href="" data-toggle="modal" data-target="#logonForm">Logon</a></li>
                 <li><a href="../navbar-static-top/">About</a></li>
                 <li><a href="./">Help</a></li>
             </ul>
@@ -35,16 +48,14 @@
 </nav>
 
 
-<div class="jumbotron">
+<div class="jumbotron jumboimage"  style="margin-top: 60px">
     <div class="container">
-        <span class="glyphicon glyphicon-home"></span>
 
         <h1 class="display-3">Flash cards made simple !</h1>
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 
         <p>Create and share flashcards for any purpose</p>
 
-        <p><a class="btn btn-primary btn-lg" href="./card_set_edit.html" role="button">Get Started! &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="./newAccount.html" role="button">Get Started! &raquo;</a></p>
     </div>
 </div>
 
@@ -70,14 +81,57 @@
 
             <p>Monetize your hard work by offering your card sets to other Cardify users.</p>
 
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="#" role="button">Vieaw details &raquo;</a></p>
         </div>
     </div>
 
-    <hr>
+    <div  class=" nav navbar navbar-fixed-bottom navbar-inverse nav-center">
+        <ul class="nav navbar-nav">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Roadmap</a></li>
+        </ul>
+    </div>
 
-    <div class="navbar navbar-fixed-bottom">
-        <p>&copy; Cardify 2015</p>
+<!--    <div class="navbar navbar-fixed-bottom navbar-inverse navbar-text" style="text-align: center; padding-top: 20px">
+        <ul class="list-inline" style="color:#fff;">
+            <li style="padding: 0px 20px 0px 20px" >Contact</li>
+            <li >Support</li>
+            <li >Roadmap</li>
+        </ul>
+    </div>-->
+</div>
+
+
+<!-- Logon modal -->
+
+<div id="logonForm" class="modal fade " tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="padding: 20px" >
+            <form class="form-horizontal">
+                <fieldset >
+                    <legend>Log on</legend>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-2 control-label">User Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="username" placeholder="Enter your user name">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-sm-2 control-label">User Name</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default pull-right">Log on</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </div>
 
